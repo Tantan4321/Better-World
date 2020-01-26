@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'AppColors.dart';
 
 
@@ -64,6 +64,18 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {},
     );
 
+    void customLaunch(command) async
+    {
+      if(await canLaunch(command))
+        {
+          await launch(command);
+        }
+      else
+        {
+          print("Could not Launch Command");
+        }
+    }
+
     return Scaffold(
       appBar: GradientAppBar(
         elevation: 10.0,
@@ -83,9 +95,10 @@ class _LoginPageState extends State<LoginPage> {
             password,
             SizedBox(height: 24.0),
             loginButton,
-            RaisedButton(onPressed: (
-                customLaunch(mailTo:tantan2012g@gmail.com?subject=test%20,body=test%20test)
-                ),),
+            RaisedButton(onPressed: ()
+              {
+                customLaunch('mailto:tantan2012g@gmail.com?subject=test%20,body=test%20test');
+              },),
             forgotLabel
           ],
         ),
