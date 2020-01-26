@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
   Widget _buildCard() {
     return Container(
         decoration: BoxDecoration(
-          color: AppColors.darkTeal,
+          color: AppColors.darkBlue,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
         ),
         child: ListView(
@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
       appBar: GradientAppBar(
         elevation: 10.0,
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Text('DECIDE APP NAME YOU NOOBS'),
+        title: Text('Better World'),
       ),
       backgroundColor: AppColors.darkBlue,
       body: Column(
