@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nunito',
       ),
       home: LoginPage(),
-      initialRoute: '/login',
+      initialRoute: '/',
       onGenerateRoute: _getRoute,
     );
   }
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   Route _getRoute(RouteSettings settings) {
     //final ScreenArguments args = settings.arguments;
     switch (settings.name) {
-      case '/login':
+      case '/':
         return FadeRoute(page: LoginPage());
 
       case '/home':
