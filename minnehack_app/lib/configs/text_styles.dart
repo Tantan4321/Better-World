@@ -8,7 +8,7 @@ class Style {
     fontSize: 9.0,
   );
   static final commonTextStyle = baseTextStyle.copyWith(
-      color: AppColors.mintGreen,
+      color: AppColors.darkBlue,
       fontSize: 14.0,
       fontWeight: FontWeight.w400);
   static final titleTextStyle = baseTextStyle.copyWith(

@@ -86,11 +86,11 @@ class _LoginPageState extends State<LoginPage> {
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('Better World'),
       ),
-      backgroundColor: AppColors.mintGreen,
+      backgroundColor: AppColors.oceanBlue,
 
       body: Container(
         decoration: BoxDecoration(
-          color: AppColors.smokeWhite,
+          color: AppColors.blue,
           borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
         ),
 

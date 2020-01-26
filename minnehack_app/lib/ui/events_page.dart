@@ -21,7 +21,7 @@ class _EventsListState extends State<EventsList> {
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('Better World'),
       ),
-      backgroundColor: AppColors.mintGreen,
+      backgroundColor: AppColors.navyBlue,
       body: Expanded(
         child: Container(
           child: CustomScrollView(
