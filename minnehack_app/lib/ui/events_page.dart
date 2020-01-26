@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
+import 'package:minnehack_app/data/dataForEvents.dart';
 import 'package:minnehack_app/models/planets.dart';
 import 'package:minnehack_app/widgets/event_summary.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -23,25 +24,28 @@ class _EventsListState extends State<EventsList> {
       ),
 
       backgroundColor: AppColors.navyBlue,
-      body: Expanded(
-        child: Container(
-          child: CustomScrollView(
-            scrollDirection: Axis.vertical,
-            shrinkWrap: false,
-            slivers: <Widget>[
-              new SliverPadding(
-                padding: const EdgeInsets.symmetric(vertical: 24.0),
-                sliver: new SliverList(
-                  delegate: new SliverChildBuilderDelegate(
-                        (context, index) => new EventSummary(planets[index]),
-                    childCount: planets.length,
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
+              scrollDirection: Axis.vertical,
+              shrinkWrap: false,
+              slivers: <Widget>[
+                new SliverPadding(
+                  padding: const EdgeInsets.symmetric(vertical: 24.0),
+                  sliver: new SliverList(
+                    delegate: new SliverChildBuilderDelegate(
+                          (context, index) => new EventSummary(event: events[index], id: index),
+                      childCount: events.length,
+                    ),
                   ),
                 ),
-              ),
 
-          ],
-        ),
-      )
-    ));
+            ],
+            ),
+          ),
+        ],
+      ));
   }
 }
