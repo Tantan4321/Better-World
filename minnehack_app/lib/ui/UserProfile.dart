@@ -2,25 +2,13 @@ import 'package:flutter/material.dart';
 
 
 class UserProfilePage extends StatelessWidget {
-  final String _fullName = "Nick Frost";
+  final String _fullName = "Bruh Moment";
   final String _status = "Software Developer";
   final String _bio =
       "\"Hi, I am a Freelance developer working for hourly basis. If you wants to contact me to build your product leave a message.\"";
-  final String _followers = "173";
-  final String _posts = "24";
-  final String _scores = "450";
 
-  Widget _buildCoverImage(Size screenSize) {
-    return Container(
-      height: screenSize.height / 2.6,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/cover.jpeg'),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
+
+
 
   Widget _buildProfileImage() {
     return Center(
@@ -104,23 +92,7 @@ class UserProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildStatContainer() {
-    return Container(
-      height: 60.0,
-      margin: EdgeInsets.only(top: 8.0),
-      decoration: BoxDecoration(
-        color: Color(0xFFEFF4F7),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          _buildStatItem("Followers", _followers),
-          _buildStatItem("Posts", _posts),
-          _buildStatItem("Scores", _scores),
-        ],
-      ),
-    );
-  }
+
 
   Widget _buildBio(BuildContext context) {
     TextStyle bioTextStyle = TextStyle(
@@ -220,7 +192,6 @@ class UserProfilePage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          _buildCoverImage(screenSize),
           SafeArea(
             child: SingleChildScrollView(
               child: Column(
@@ -229,7 +200,6 @@ class UserProfilePage extends StatelessWidget {
                   _buildProfileImage(),
                   _buildFullName(),
                   _buildStatus(context),
-                  _buildStatContainer(),
                   _buildBio(context),
                   _buildSeparator(screenSize),
                   SizedBox(height: 10.0),
