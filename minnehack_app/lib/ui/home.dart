@@ -48,6 +48,7 @@ class _HomeState extends State<Home> {
       child: listView,
     );
   }
+
   onScroll() {}
 
   Widget _buildCard() {
@@ -56,7 +57,9 @@ class _HomeState extends State<Home> {
           color: AppColors.smokeWhite,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
         ),
-        child: Column(
+        child: ListView(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
           children: <Widget>[
             SizedBox(height: 80),
             Padding(
@@ -71,7 +74,11 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(height: 40),
-            CategoryList(),
+            SizedBox(
+                height: 300,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(30),
+                    child: CategoryList())),
           ],
         ));
   }
