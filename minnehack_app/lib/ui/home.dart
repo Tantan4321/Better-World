@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:minnehack_app/widgets/category_list.dart';
 
-import 'AppColors.dart';
+import '../configs/AppColors.dart';
 
 class Home extends StatefulWidget {
   @override

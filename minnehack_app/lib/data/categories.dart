@@ -1,6 +1,6 @@
 
 import 'package:minnehack_app/models/category.dart';
-import 'package:minnehack_app/ui/AppColors.dart';
+import 'package:minnehack_app/configs/AppColors.dart';
 
 const List<Category> categories = [
   Category(name: "Fundraising", color: AppColors.teal),

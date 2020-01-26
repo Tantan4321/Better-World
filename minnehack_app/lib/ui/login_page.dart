@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'AppColors.dart';
+import '../configs/AppColors.dart';
 
 
 class LoginPage extends StatefulWidget {
