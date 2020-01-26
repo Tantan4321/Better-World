@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
   Widget _buildCard() {
     return Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.smokeWhite,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
         ),
         child: Column(
