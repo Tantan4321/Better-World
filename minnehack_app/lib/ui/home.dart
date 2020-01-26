@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:minnehack_app/widgets/category_list.dart';
 
+import 'AppColors.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -82,12 +84,13 @@ class _HomeState extends State<Home> {
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('DECIDE APP NAME YOU NOOBS'),
       ),
-      backgroundColor: Color(0xFF3EB489),
+      backgroundColor: AppColors.mintGreen,
       body: Column(
         children: <Widget>[
           _buildCard(),
         ],
       ),
+      drawer: getNavDrawer(context),
     );
   }
 }

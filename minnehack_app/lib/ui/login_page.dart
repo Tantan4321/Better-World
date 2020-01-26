@@ -26,6 +26,7 @@ class _LoginPageState extends State<LoginPage> {
       autofocus: false,
       decoration: InputDecoration(
         hintText: 'iamhelper@gmail.com',
+        filled: true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
@@ -37,6 +38,7 @@ class _LoginPageState extends State<LoginPage> {
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
+        filled: true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
@@ -85,9 +87,6 @@ class _LoginPageState extends State<LoginPage> {
             password,
             SizedBox(height: 24.0),
             loginButton,
-            RaisedButton(onPressed: (
-                customLaunch(mailTo:tantan2012g@gmail.com?subject=test%20,body=test%20test)
-                ),),
             forgotLabel
           ],
         ),
