@@ -17,7 +17,7 @@ class DetailPage extends StatelessWidget {
     return new Scaffold(
       body: new Container(
           constraints: new BoxConstraints.expand(),
-          color: new Color(0xFF736AB7),
+          color: new Color(0xFF008080),
           child: Stack(
             children: <Widget>[
               Column(
@@ -54,7 +54,7 @@ class DetailPage extends StatelessWidget {
 
     str += email;
     str += "?subject=Volunteer%20Signup%20from%20Better%20World";
-    str += '&body=' + personName+ '%20signed%20up%20for%20the%20"' + event.title + '"%20event.';
+    str += '&body=' + personName + '%20signed%20up%20for%20the%20"' + event.title + '"%20event.';
     return str;
   }
 
@@ -97,7 +97,7 @@ class DetailPage extends StatelessWidget {
       height: 110.0,
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
-          colors: <Color>[new Color(0x00736AB7), new Color(0xFF736AB7)],
+          colors: <Color>[Colors.transparent, new Color(0xFF008080)],
           stops: [0.0, 0.9],
           begin: const FractionalOffset(0.0, 0.0),
           end: const FractionalOffset(0.0, 1.0),
@@ -123,14 +123,21 @@ class DetailPage extends StatelessWidget {
                     style: Style.headerTextStyle,
                   ),
                   Separator(),
-                  Text(event.description, style: Style.commonTextStyle),
+                  Text(event.description, style: Style.detailsTextStyle),
+                  SizedBox(height: 20.0,),
+                  Text(
+                    "Date + Time".toUpperCase(),
+                    style: Style.headerTextStyle,
+                  ),
+                  Separator(),
+                  Text(event.time, style: Style.detailsTextStyle),
                   SizedBox(height: 20.0,),
                   Text(
                     "Requirements".toUpperCase(),
                     style: Style.headerTextStyle,
                   ),
                   Separator(),
-                  Text(event.requirements, style: Style.commonTextStyle),
+                  Text(event.requirements, style: Style.detailsTextStyle),
                 ],
               ),
             ),
@@ -146,7 +153,7 @@ class DetailPage extends StatelessWidget {
           .of(context)
           .padding
           .top),
-      child: new BackButton(color: Colors.red),
+      child: new BackButton(color: AppColors.darkBlue),
     );
   }
 }

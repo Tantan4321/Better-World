@@ -50,11 +50,17 @@ class _HomeState extends State<Home> {
     );
   }
 
-  onScroll() {}
-
-  Widget _buildCard() {
-    double c_height = MediaQuery.of(context).size.height;
-    return Container(
+  @override
+  Widget build(BuildContext context) {
+    double cHeight = MediaQuery.of(context).size.height;
+    return Scaffold(
+      appBar: GradientAppBar(
+        elevation: 10.0,
+        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+        title: Text('Better World'),
+      ),
+      backgroundColor: AppColors.darkBlue,
+      body: Container(
         decoration: BoxDecoration(
           color: AppColors.darkBlue,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
@@ -63,7 +69,7 @@ class _HomeState extends State<Home> {
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           children: <Widget>[
-            SizedBox(height: c_height * 0.1),
+            SizedBox(height: cHeight * 0.1),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 28),
               child: Text(
@@ -76,29 +82,14 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: c_height * 0.05),
+            SizedBox(height: cHeight * 0.05),
             SizedBox(
-                height: c_height * 0.6,
+                height: cHeight * 0.6,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: CategoryList())),
           ],
-        ));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: GradientAppBar(
-        elevation: 10.0,
-        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Text('Better World'),
-      ),
-      backgroundColor: AppColors.darkBlue,
-      body: Column(
-        children: <Widget>[
-          _buildCard(),
-        ],
+        )
       ),
       drawer: getNavDrawer(context),
     );
