@@ -84,7 +84,8 @@ class _LoginPageState extends State<LoginPage> {
       appBar: GradientAppBar(
         elevation: 10.0,
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Text('Better World'),
+        title: Center( child: Text('Better World'),),
+
       ),
       backgroundColor: AppColors.mintGreen,
 
