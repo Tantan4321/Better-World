@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minnehack_app/configs/AppColors.dart';
 import 'package:minnehack_app/configs/text_styles.dart';
 import 'package:minnehack_app/models/event.dart';
 import 'package:minnehack_app/widgets/separator.dart';
@@ -40,7 +41,7 @@ class EventV2Card extends StatelessWidget {
       height: 154.0,
       margin: EdgeInsets.only(top: 72.0),
       decoration: new BoxDecoration(
-        color: new Color(0xFF333366),
+        color: AppColors.navyBlue,
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
         boxShadow: <BoxShadow>[

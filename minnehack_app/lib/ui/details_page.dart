@@ -17,7 +17,7 @@ class DetailPage extends StatelessWidget {
     return new Scaffold(
       body: new Container(
           constraints: new BoxConstraints.expand(),
-          color: new Color(0xFF736AB7),
+          color: new Color(0xFF008080),
           child: Stack(
             children: <Widget>[
               Column(
