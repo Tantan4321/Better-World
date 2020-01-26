@@ -9,6 +9,18 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
+
+  Widget build(BuildContext context) {
+    double Height = MediaQuery.of(context).size.height;
+    return Scaffold(
+        appBar: GradientAppBar(
+          elevation: 10.0,
+          gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+          title: Text('Better World'),
+        ),
+        backgroundColor: AppColors.darkBlue,
+    );}
+
   Drawer getNavDrawer(BuildContext context) {
     var headerChild = DrawerHeader(child: Text("Header"));
     var aboutChild = AboutListTile(
