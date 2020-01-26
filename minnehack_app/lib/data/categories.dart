@@ -12,4 +12,5 @@ const List<Category> categories = [
   Category(name: "Coaching/Teaching", color: AppColors.mintGreen),
   Category(name: "Food Preparation", color: AppColors.darkTeal),
   Category(name: "Social Justice", color: AppColors.copper),
+  Category(name: "Emergency Relief", color: AppColors.lightTeal),
 ];
