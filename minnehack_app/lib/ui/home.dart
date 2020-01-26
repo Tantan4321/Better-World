@@ -47,7 +47,6 @@ class _HomeState extends State<Home> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Login", "/"),
       getNavItem(Icons.home, "Home", "/home"),
       getNavItem(Icons.verified_user, "User", "/user"),
       aboutChild
@@ -68,10 +67,12 @@ class _HomeState extends State<Home> {
         elevation: 10.0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.exit_to_app, color: Colors.red,),
+            tooltip: 'Logout',
+            icon: Icon(Icons.exit_to_app, color: Colors.black87,),
             onPressed: () {
               Navigator.of(context).pushReplacementNamed("/");
             },
+
           )
         ],
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),

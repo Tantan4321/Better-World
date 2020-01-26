@@ -63,7 +63,6 @@ class _UserProfileState extends State<UserProfile> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Login", "/"),
       getNavItem(Icons.home, "Home", "/home"),
       aboutChild
     ];
