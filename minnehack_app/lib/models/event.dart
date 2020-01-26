@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class results {
-  const results({
+class Event {
+  const Event({
     @required this.title,
     @required this.description,
-    this.types = const [],
+    this.tags = const [],
     @required this.time,
     @required this.image,
     @required this.location,
@@ -24,5 +24,5 @@ class results {
   final String time;
   final String title;
   final String description;
-  final List<String> types;
+  final List<String> tags;
 }
