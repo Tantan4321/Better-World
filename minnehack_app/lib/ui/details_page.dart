@@ -153,7 +153,7 @@ class DetailPage extends StatelessWidget {
           .of(context)
           .padding
           .top),
-      child: new BackButton(color: Colors.red),
+      child: new BackButton(color: AppColors.darkBlue),
     );
   }
 }
