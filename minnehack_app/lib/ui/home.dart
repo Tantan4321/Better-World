@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height: 40),
             SizedBox(
-                height: 300,
+                height: 600,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: CategoryList())),

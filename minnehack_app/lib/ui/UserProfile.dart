@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
+import 'package:minnehack_app/configs/AppColors.dart';
 
 
 class UserProfile extends StatelessWidget {
@@ -22,17 +23,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return new Scaffold(
+      backgroundColor: AppColors.navyBlue,
         appBar: GradientAppBar(
           elevation: 10.0,
           gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-          title: Text('Better World'),
+          title: Center(child: Text('Better World'),),
         ),
         body: new Stack(
           children: <Widget>[
             ClipPath(
-              child: Container(color: Colors.black.withOpacity(0.8)),
+              child: Container(color: AppColors.darkTeal.withOpacity(0.8)),
               clipper: getClipper(),
             ),
+
             Positioned(
                 width: 350.0,
                 top: MediaQuery.of(context).size.height / 5,
@@ -51,10 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
                             boxShadow: [
                               BoxShadow(blurRadius: 7.0, color: Colors.black)
                             ])),
-                    SizedBox(height: 90.0),
+                    SizedBox(height: 75.0),
                     Text(
                       'Your Name',
                       style: TextStyle(
+                          color: Colors.white,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat'),
@@ -63,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text(
                       'Information about yourself',
                       style: TextStyle(
+                          color: Colors.white,
                           fontSize: 17.0,
                           fontStyle: FontStyle.italic,
                           fontFamily: 'Montserrat'),

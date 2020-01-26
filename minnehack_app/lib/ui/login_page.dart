@@ -16,8 +16,8 @@ class _LoginPageState extends State<LoginPage> {
       tag: 'hero',
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
-        radius: 48.0,
-        child: Image.asset('assets/images/logo.png'),
+        radius: 130.0,
+        child: Image.asset('assets/images/logo.png', height: 500,),
       ),
     );
 
@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.of(context).pushReplacementNamed("/home");
         },
         padding: EdgeInsets.all(12),
-        color: Colors.lightBlueAccent,
+        color: AppColors.darkBlue,
         child: Text('Log In', style: TextStyle(color: Colors.white)),
       ),
     );
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
 
-      backgroundColor: AppColors.oceanBlue,
+      backgroundColor: AppColors.darkBlue,
 
         
         body: Column(children: <Widget>[
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
-          color: AppColors.blue,
+          color: AppColors.darkTeal,
           borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
         ),
             child: ListView(
