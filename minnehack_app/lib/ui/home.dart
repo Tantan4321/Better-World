@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
 
     var myNavChildren = [
       headerChild,
-      getNavItem(Icons.settings, "Login", "/login"),
+      getNavItem(Icons.settings, "Login", "/"),
       getNavItem(Icons.home, "Home", "/home"),
       getNavItem(Icons.account_box, "List", "/list"),
       aboutChild
