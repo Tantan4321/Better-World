@@ -4,6 +4,8 @@ import 'package:minnehack_app/configs/text_styles.dart';
 import 'package:minnehack_app/models/event.dart';
 import 'package:minnehack_app/widgets/event_v2_card.dart';
 import 'package:minnehack_app/widgets/separator.dart';
+import 'package:nice_button/nice_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   final Event event;
@@ -19,7 +21,14 @@ class DetailPage extends StatelessWidget {
           child: Stack(
             children: <Widget>[
               Column(
-                children: <Widget>[_getHeader(context), _getContent()],
+                children: <Widget>[
+                  _getHeader(context),
+                  _getContent(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: _getEmailButton(context),
+                  ),
+                ],
               ),
               Padding(
                 padding: new EdgeInsets.fromLTRB(0.0, 72.0, 0.0, 32.0),
@@ -27,6 +36,26 @@ class DetailPage extends StatelessWidget {
               ),
             ],
           )),
+    );
+  }
+
+  void customLaunch(command) async {
+    if (await canLaunch(command)) {
+      await launch(command);
+    } else {
+      print("Could not Launch Command");
+    }
+  }
+
+  NiceButton _getEmailButton(context) {
+    return NiceButton(
+      text: "Sign up",
+      radius: 40,
+      background: AppColors.navyBlue,
+      onPressed: () {
+        customLaunch(
+            'mailto:tantan2012g@gmail.com?subject=Volunteer%20Signup%20from%20Better%20World,body=yes');
+      },
     );
   }
 
@@ -67,7 +96,6 @@ class DetailPage extends StatelessWidget {
   }
 
   Container _getContent() {
-    final _overviewTitle = "Overview".toUpperCase();
     return new Container(
       child: Expanded(
         child: new ListView(
@@ -79,12 +107,19 @@ class DetailPage extends StatelessWidget {
               child: new Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(
-                    _overviewTitle,
+                  Text(
+                    "Overview".toUpperCase(),
                     style: Style.headerTextStyle,
                   ),
                   Separator(),
                   Text(event.description, style: Style.commonTextStyle),
+                  SizedBox(height: 20.0,),
+                  Text(
+                    "Requirements".toUpperCase(),
+                    style: Style.headerTextStyle,
+                  ),
+                  Separator(),
+                  Text(event.requirements, style: Style.commonTextStyle),
                 ],
               ),
             ),
@@ -96,7 +131,10 @@ class DetailPage extends StatelessWidget {
 
   Container _getToolbar(BuildContext context) {
     return new Container(
-      margin: new EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+      margin: new EdgeInsets.only(top: MediaQuery
+          .of(context)
+          .padding
+          .top),
       child: new BackButton(color: Colors.red),
     );
   }

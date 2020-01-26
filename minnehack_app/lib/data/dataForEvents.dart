@@ -27,7 +27,7 @@ const List<Event> events = [
     email: "results@results.org",
     organization: "Results",
     website: "https://results.org/",
-    requirements: 'Orientation or Training'
+    requirements: 'Orientation or Training\n'
         'Time commitment is flexible and can be between 2-10 hours / month depending on your needs. This includes training.',
   ),
   const Event(
@@ -49,11 +49,12 @@ const List<Event> events = [
       email: "info@somn.org",
       organization: "Special Olympics Minnesota",
       website: "https://specialolympicsminnesota.org/",
-      requirements: 'Background Check'
-          'Must be at least 16'
-          'Orientation or Training'
-          '1-2 hours per week for an 8-10 week sport season'
-          'friendly, enthusiastic, works well with others,from as little as 1 hour per week'),
+      requirements: 'Background Check\n'
+          'Must be at least 16\n'
+          'Orientation or Training\n'
+          '1-2 hours per week for an 8-10 week sport season\n'
+          'Friendly, enthusiastic, works well with others\n'
+          'As little as 1 hour per week'),
   const Event(
       title: "Climb for a Cure - Event Day Volunteers",
       description:
@@ -68,7 +69,7 @@ const List<Event> events = [
           'Much more!'
           'Let us know if you or your group is interested and we would love to find a place for you at our Climb for a Cure!'
           'Show Less',
-      time: "Sat Feb 29, 202005:00 AM - 02:00 PM",
+      time: "Sat Feb 29, 2020 05:00 AM - 02:00 PM",
       image:
           'https://www.volunteermatch.org/images/gallery/9F33A9DA-DA8B-DDC5-FBBF-4861DD4A31AB_m?ts=1444919773000',
       location: 'IDS Center'
@@ -77,5 +78,5 @@ const List<Event> events = [
       email: "cff@cff.org",
       organization: "Cystic Fibrosis Foundation",
       website: "https://www.cff.org/",
-      requirements: "find this")
+      requirements: "None")
 ];

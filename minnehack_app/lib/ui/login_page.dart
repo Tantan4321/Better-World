@@ -68,14 +68,6 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {},
     );
 
-    void customLaunch(command) async {
-      if (await canLaunch(command)) {
-        await launch(command);
-      } else {
-        print("Could not Launch Command");
-      }
-    }
-
     return Scaffold(
 
       backgroundColor: AppColors.darkBlue,
