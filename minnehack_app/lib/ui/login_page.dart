@@ -77,18 +77,19 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     return Scaffold(
-      appBar: GradientAppBar(
-        elevation: 10.0,
-        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Center( child: Text('Better World'),),
 
-      ),
       backgroundColor: AppColors.oceanBlue,
 
         
         body: Column(children: <Widget>[
-          Text('Better World',
-              textAlign: TextAlign.center, style: Style.headerTextStyle),
+          SizedBox(height: 60,),
+          Expanded(
+            child: Container(
+              child: Text('Better World',
+                  textAlign: TextAlign.center, style: Style.headerTextStyle),
+            ),
+          ),
+          logo,
           SizedBox(height: 100,),
           Container(
             alignment: Alignment.bottomCenter,
@@ -101,8 +102,6 @@ class _LoginPageState extends State<LoginPage> {
               shrinkWrap: true,
               padding: EdgeInsets.only(left: 24.0, right: 24.0),
               children: <Widget>[
-
-                logo,
                 SizedBox(height: 48.0),
                 email,
                 SizedBox(height: 8.0),
