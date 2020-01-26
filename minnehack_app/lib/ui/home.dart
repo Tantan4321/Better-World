@@ -43,9 +43,9 @@ class _HomeState extends State<Home> {
       appBar: GradientAppBar(
         elevation: 10.0,
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Text('Volera'),
+        title: Text('DECIDE APP NAME YOU NOOBS'),
       ),
-      backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: Color(0xFF3EB489),
       body: Column(
         children: <Widget>[
           _buildCard(),
