@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         radius: 48.0,
         child: Image.asset('assets/images/logo.png'),
       ),
