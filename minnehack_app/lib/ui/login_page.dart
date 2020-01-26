@@ -84,7 +84,8 @@ class _LoginPageState extends State<LoginPage> {
       appBar: GradientAppBar(
         elevation: 10.0,
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Text('Better World'),
+        title: Center( child: Text('Better World'),),
+
       ),
       backgroundColor: AppColors.oceanBlue,
 
@@ -99,6 +100,7 @@ class _LoginPageState extends State<LoginPage> {
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
+            Text('Better World', style: TextStyle(fontFamily: "Roboto",)),
             logo,
             SizedBox(height: 48.0),
             email,

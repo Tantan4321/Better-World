@@ -1,9 +1,10 @@
-import 'package:minnehack_app/models/ResultsForEachCategory.dart';
 
 
+import 'package:minnehack_app/models/event.dart';
 
-const List<results> Res = [
-   const results(
+
+const List<Event> Res = [
+   const Event(
         title: "Be an advocate. Fight Poverty",
         description: 'Do you wish that you could have a say in the policies that impact millions of people living in poverty here in the United States and around the world? Are you feeling overwhelmed by this political moment? Maybe you’ve been feeling the urge to do something but aren’t sure what...'
             'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
@@ -38,7 +39,7 @@ const List<results> Res = [
         requirements: 'Orientation or Training'
        'Time commitment is flexible and can be between 2-10 hours / month depending on your needs. This includes training.',
    ),
-  const results(title: "Metro Area - Become a Team Assistant with Special Olympics!",
+  const Event(title: "Metro Area - Become a Team Assistant with Special Olympics!",
       description: 'Are you looking to be inspired or have an impact in your community? Special Olympics Programs change lives and bring people together. Join the fun - be a part of our global community of athletes, volunteers and fans.'
 'Opportunities Available'
 'Team Assistant'
@@ -62,7 +63,7 @@ const List<results> Res = [
 '1-2 hours per week for an 8-10 week sport season'
 'friendly, enthusiastic, works well with others,from as little as 1 hour per week'
 ),
-  const results(title: "Climb for a Cure - Event Day Volunteers",
+  const Event(title: "Climb for a Cure - Event Day Volunteers",
       description:
       'Be apart of the Cystic Fibrosis Foundation\'s Climb for a Cure on Saturday, February 29, 2020 in downtown Minneapolis. More than 500 climbers will walk or run up the stairs to benefit individuals living with cystic fibrosis (CF). The Cystic Fibrosis Foundation is seeking volunteers just like you to help with:'
       'Registration'
