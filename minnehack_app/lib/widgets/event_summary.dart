@@ -34,7 +34,13 @@ class EventSummary extends StatelessWidget {
             color: Colors.blue,
           ),
           Container(width: 8.0),
-          Text(value, style: Style.smallTextStyle),
+          Expanded(
+            child: Text(value,
+                maxLines: 1,
+                softWrap: false,
+                overflow: TextOverflow.clip,
+                style: Style.smallTextStyle),
+          ),
         ]),
       );
     }
