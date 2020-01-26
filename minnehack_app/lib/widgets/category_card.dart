@@ -43,7 +43,7 @@ class CategoryCard extends StatelessWidget {
         top: -itemHeight * 0.16,
         right: -itemHeight * 0.25,
         child: Image.asset(
-          "assets/images/pokeball.png", //TODO: change this
+          "assets/images/dirtBlock.png", //TODO: change this
           width: itemHeight * 1.388,
           height: itemHeight * 1.388,
           color: Colors.white.withOpacity(0.14),

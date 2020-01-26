@@ -3,10 +3,13 @@ import 'package:minnehack_app/models/category.dart';
 import 'package:minnehack_app/ui/AppColors.dart';
 
 const List<Category> categories = [
-  Category(name: "Pokedex", color: AppColors.teal),
-  Category(name: "Moves", color: AppColors.red),
-  Category(name: "Abilities", color: AppColors.blue),
-  Category(name: "Items", color: AppColors.yellow),
-  Category(name: "Locations", color: AppColors.purple),
-  Category(name: "Type Charts", color: AppColors.brown),
+  Category(name: "Fundraising", color: AppColors.teal),
+  Category(name: "Environmental", color: AppColors.red),
+  Category(name: "Children/Youth", color: AppColors.blue),
+  Category(name: "Elderly", color: AppColors.yellow),
+  Category(name: "Cleanup", color: AppColors.purple),
+  Category(name: "Education", color: AppColors.brown),
+  Category(name: "Coaching/Teaching", color: AppColors.cream),
+  Category(name: "Food Preparation", color: AppColors.darkTeal),
+  Category(name: "Social Justice", color: AppColors.copper),
 ];
