@@ -87,7 +87,12 @@ class _LoginPageState extends State<LoginPage> {
         title: Text('Volera'),
       ),
       backgroundColor: AppColors.mintGreen,
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+          color: AppColors.smokeWhite,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
+
         child: ListView(
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
