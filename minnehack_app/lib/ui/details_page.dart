@@ -97,7 +97,7 @@ class DetailPage extends StatelessWidget {
       height: 110.0,
       decoration: new BoxDecoration(
         gradient: new LinearGradient(
-          colors: <Color>[new Color(0x00736AB7), new Color(0xFF736AB7)],
+          colors: <Color>[Colors.transparent, new Color(0xFF008080)],
           stops: [0.0, 0.9],
           begin: const FractionalOffset(0.0, 0.0),
           end: const FractionalOffset(0.0, 1.0),
