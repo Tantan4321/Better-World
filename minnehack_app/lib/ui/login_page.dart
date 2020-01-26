@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 
+import 'AppColors.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -68,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('Volera'),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.mintGreen,
       body: Center(
         child: ListView(
           shrinkWrap: true,
@@ -81,6 +83,9 @@ class _LoginPageState extends State<LoginPage> {
             password,
             SizedBox(height: 24.0),
             loginButton,
+            RaisedButton(onPressed: (
+                customLaunch(mailTo:tantan2012g@gmail.com?subject=test%20,body=test%20test)
+                ),),
             forgotLabel
           ],
         ),
