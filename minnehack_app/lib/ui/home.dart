@@ -53,6 +53,7 @@ class _HomeState extends State<Home> {
   onScroll() {}
 
   Widget _buildCard() {
+    double c_height = MediaQuery.of(context).size.height;
     return Container(
         decoration: BoxDecoration(
           color: AppColors.darkBlue,
@@ -62,7 +63,7 @@ class _HomeState extends State<Home> {
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           children: <Widget>[
-            SizedBox(height: 80),
+            SizedBox(height: c_height * 0.1),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 28),
               child: Text(
@@ -75,9 +76,9 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: c_height * 0.05),
             SizedBox(
-                height: 600,
+                height: c_height * 0.6,
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
                     child: CategoryList())),

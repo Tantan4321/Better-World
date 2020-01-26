@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:minnehack_app/ui/UserProfile.dart';
+import 'package:minnehack_app/ui/user_page.dart';
 import 'package:minnehack_app/ui/events_page.dart';
 import 'package:minnehack_app/ui/home.dart';
 import 'ui/login_page.dart';
@@ -44,6 +44,9 @@ class MyApp extends StatelessWidget {
         return FadeRoute(page: EventsList());
 
       case '/user':
+        return FadeRoute(page: UserProfile());
+
+      case '/':
         return FadeRoute(page: UserProfile());
 
       default:
