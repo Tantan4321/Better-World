@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:minnehack_app/models/ResultsForEachCategory.dart';
 import 'package:minnehack_app/models/category.dart';
 import 'package:minnehack_app/models/organization.dart';
-import 'package:minnehack_app/ui/AppColors.dart';
+import 'package:minnehack_app/configs/AppColors.dart';
 
 const List<results> Res = [
    const results(
@@ -13,7 +13,7 @@ const List<results> Res = [
 
             'RESULTS is a movement of passionate, committed, everyday people. Together we use our voices to influence political decisions that will bring an end to poverty.'
 
-            'As a RESULTS volunteer, you will be an effective advocate in the fight against poverty.
+            'As a RESULTS volunteer, you will be an effective advocate in the fight against poverty.'
 
         'Practically, that means:'
 
