@@ -1,11 +1,19 @@
 import 'package:minnehack_app/models/event.dart';
 
+
 const List<Event> events = [
   const Event(
     title: "Be an advocate. Fight Poverty",
     description:
-        'Do you wish that you could have a say in the policies that impact millions of people living in poverty here in the United States and around the world? Are you feeling overwhelmed by this political moment? Maybe you’ve been feeling the urge to do something but aren’t sure what...'
+
+    'Do you wish that you could have a say in the policies that impact millions of people living in poverty here in the United States and around the world? Are you feeling overwhelmed by this political moment? Maybe you’ve been feeling the urge to do something but aren’t sure what...'
         'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
+        'Do you wish that you could have a say in the policies'
+        'that impact millions of people living in poverty here in the United States and around the world? '
+        'Are you feeling overwhelmed by this political moment? '''
+        'Maybe you’ve been feeling the urge to do something but aren’t sure what...'
+        'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. '
+        'At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
         'RESULTS is a movement of passionate, committed, everyday people. Together we use our voices to influence political decisions that will bring an end to poverty.'
         'As a RESULTS volunteer, you will be an effective advocate in the fight against poverty.'
         'Practically, that means:'
@@ -20,8 +28,7 @@ const List<Event> events = [
         'Step up. Speak out. Become a RESULTS advocate.'
         'Learn more at results.org.',
     time: "We'll work with your schedule",
-    image:
-        "https://res.cloudinary.com/dktp1ybbx/image/upload/c_limit,h_180,w_180/f_auto,fl_lossy,q_auto/v1541443016/organization/prod/731054/xlPVVgc0Mx.jpg",
+    image: "https://cdn.talkpoverty.org/content/uploads/2014/05/joel-e1461333972241-938x625.jpg",
     location: 'City Wide Opportunity'
         'Minneapolis, MN 55415',
     email: "results@results.org",
