@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 130.0,
-        child: Image.asset('assets/images/logo.png', height: 500,),
+        child: Image.asset('assets/images/logo.png', height: MediaQuery.of(context).size.height * 0.5,),
       ),
     );
 
@@ -83,14 +83,18 @@ class _LoginPageState extends State<LoginPage> {
         
         body: Column(children: <Widget>[
           SizedBox(height: 60,),
+          Container(
+            child: Text('Better World',
+                textAlign: TextAlign.center, style: Style.headerTextStyle),
+          ),
+          SizedBox(height: 20,),
           Expanded(
-            child: Container(
-              child: Text('Better World',
-                  textAlign: TextAlign.center, style: Style.headerTextStyle),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: logo,
             ),
           ),
-          logo,
-          SizedBox(height: 100,),
+          SizedBox(height: 80,),
           Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
@@ -108,12 +112,6 @@ class _LoginPageState extends State<LoginPage> {
                 password,
                 SizedBox(height: 24.0),
                 loginButton,
-                RaisedButton(
-                  onPressed: () {
-                    customLaunch(
-                        'mailto:tantan2012g@gmail.com?subject=test%20,body=test%20test');
-                  },
-                ),
                 forgotLabel
               ],
             ),
