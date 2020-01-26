@@ -66,6 +66,14 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: GradientAppBar(
         elevation: 10.0,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.exit_to_app, color: Colors.red,),
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed("/");
+            },
+          )
+        ],
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('Better World'),
       ),
