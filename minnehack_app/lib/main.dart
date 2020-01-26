@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         return FadeRoute(page: Home());
 
       case '/user':
-        return FadeRoute(page: UserProfilePage());
+        return FadeRoute(page: UserProfile());
 
       default:
         return null;

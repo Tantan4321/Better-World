@@ -1,217 +1,130 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_app_bar/gradient_app_bar.dart';
 
 
-class UserProfilePage extends StatelessWidget {
-  final String _fullName = "Bruh Moment";
-  final String _status = "Software Developer";
-  final String _bio =
-      "\"Hi, I am a Freelance developer working for hourly basis. If you wants to contact me to build your product leave a message.\"";
+class UserProfile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: new MyHomePage(),
+    );
+  }
+}
 
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => new _MyHomePageState();
+}
 
-
-
-  Widget _buildProfileImage() {
-    return Center(
-      child: Container(
-        width: 140.0,
-        height: 140.0,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/nickfrost.jpg'),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.circular(80.0),
-          border: Border.all(
-            color: Colors.white,
-            width: 10.0,
-          ),
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+        appBar: GradientAppBar(
+          elevation: 10.0,
+          gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+          title: Text('Better World'),
         ),
-      ),
-    );
-  }
-
-  Widget _buildFullName() {
-    TextStyle _nameTextStyle = TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.black,
-      fontSize: 28.0,
-      fontWeight: FontWeight.w700,
-    );
-
-    return Text(
-      _fullName,
-      style: _nameTextStyle,
-    );
-  }
-
-  Widget _buildStatus(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 6.0),
-      decoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        borderRadius: BorderRadius.circular(4.0),
-      ),
-      child: Text(
-        _status,
-        style: TextStyle(
-          fontFamily: 'Spectral',
-          color: Colors.black,
-          fontSize: 20.0,
-          fontWeight: FontWeight.w300,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildStatItem(String label, String count) {
-    TextStyle _statLabelTextStyle = TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.black,
-      fontSize: 16.0,
-      fontWeight: FontWeight.w200,
-    );
-
-    TextStyle _statCountTextStyle = TextStyle(
-      color: Colors.black54,
-      fontSize: 24.0,
-      fontWeight: FontWeight.bold,
-    );
-
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          count,
-          style: _statCountTextStyle,
-        ),
-        Text(
-          label,
-          style: _statLabelTextStyle,
-        ),
-      ],
-    );
-  }
-
-
-
-  Widget _buildBio(BuildContext context) {
-    TextStyle bioTextStyle = TextStyle(
-      fontFamily: 'Spectral',
-      fontWeight: FontWeight.w400,//try changing weight to w500 if not thin
-      fontStyle: FontStyle.italic,
-      color: Color(0xFF799497),
-      fontSize: 16.0,
-    );
-
-    return Container(
-      color: Theme.of(context).scaffoldBackgroundColor,
-      padding: EdgeInsets.all(8.0),
-      child: Text(
-        _bio,
-        textAlign: TextAlign.center,
-        style: bioTextStyle,
-      ),
-    );
-  }
-
-  Widget _buildSeparator(Size screenSize) {
-    return Container(
-      width: screenSize.width / 1.6,
-      height: 2.0,
-      color: Colors.black54,
-      margin: EdgeInsets.only(top: 4.0),
-    );
-  }
-
-  Widget _buildGetInTouch(BuildContext context) {
-    return Container(
-      color: Theme.of(context).scaffoldBackgroundColor,
-      padding: EdgeInsets.only(top: 8.0),
-      child: Text(
-        "Get in Touch with ${_fullName.split(" ")[0]},",
-        style: TextStyle(fontFamily: 'Roboto', fontSize: 16.0),
-      ),
-    );
-  }
-
-  Widget _buildButtons() {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: InkWell(
-              onTap: () => print("followed"),
-              child: Container(
-                height: 40.0,
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                  color: Color(0xFF404A5C),
-                ),
-                child: Center(
-                  child: Text(
-                    "FOLLOW",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
+        body: new Stack(
+          children: <Widget>[
+            ClipPath(
+              child: Container(color: Colors.black.withOpacity(0.8)),
+              clipper: getClipper(),
             ),
-          ),
-          SizedBox(width: 10.0),
-          Expanded(
-            child: InkWell(
-              onTap: () => print("Message"),
-              child: Container(
-                height: 40.0,
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                ),
-                child: Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: Text(
-                      "MESSAGE",
-                      style: TextStyle(fontWeight: FontWeight.w600),
+            Positioned(
+                width: 350.0,
+                top: MediaQuery.of(context).size.height / 5,
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                    'https://ca.slack-edge.com/T02N8CJK2-U7M150FU6-80c9a6e819ab-72'),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.all(Radius.circular(75.0)),
+                            boxShadow: [
+                              BoxShadow(blurRadius: 7.0, color: Colors.black)
+                            ])),
+                    SizedBox(height: 90.0),
+                    Text(
+                      'Pee Pee Poo Poo',
+                      style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Montserrat'),
                     ),
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+                    SizedBox(height: 15.0),
+                    Text(
+                      'Subscribe guys',
+                      style: TextStyle(
+                          fontSize: 17.0,
+                          fontStyle: FontStyle.italic,
+                          fontFamily: 'Montserrat'),
+                    ),
+                    SizedBox(height: 25.0),
+                    Container(
+                        height: 30.0,
+                        width: 95.0,
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20.0),
+                          shadowColor: Colors.greenAccent,
+                          color: Colors.green,
+                          elevation: 7.0,
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Center(
+                              child: Text(
+                                'Edit Name',
+                                style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                              ),
+                            ),
+                          ),
+                        )),
+                    SizedBox(height: 25.0),
+                    Container(
+                        height: 30.0,
+                        width: 95.0,
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20.0),
+                          shadowColor: Colors.redAccent,
+                          color: Colors.red,
+                          elevation: 7.0,
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Center(
+                              child: Text(
+                                'Log out',
+                                style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
+                              ),
+                            ),
+                          ),
+                        ))
+                  ],
+                ))
+          ],
+        ));
+  }
+}
+
+class getClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = new Path();
+
+    path.lineTo(0.0, size.height / 1.9);
+    path.lineTo(size.width + 125, 0.0);
+    path.close();
+    return path;
   }
 
   @override
-  Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          SafeArea(
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  SizedBox(height: screenSize.height / 6.4),
-                  _buildProfileImage(),
-                  _buildFullName(),
-                  _buildStatus(context),
-                  _buildBio(context),
-                  _buildSeparator(screenSize),
-                  SizedBox(height: 10.0),
-                  _buildGetInTouch(context),
-                  SizedBox(height: 8.0),
-                  _buildButtons(),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    // TODO: implement shouldReclip
+    return true;
   }
 }
