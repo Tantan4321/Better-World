@@ -9,7 +9,7 @@ const List<Category> categories = [
   Category(name: "Elderly", color: AppColors.yellow),
   Category(name: "Cleanup", color: AppColors.purple),
   Category(name: "Education", color: AppColors.brown),
-  Category(name: "Coaching/Teaching", color: AppColors.cream),
+  Category(name: "Coaching/Teaching", color: AppColors.mintGreen),
   Category(name: "Food Preparation", color: AppColors.darkTeal),
   Category(name: "Social Justice", color: AppColors.copper),
 ];
