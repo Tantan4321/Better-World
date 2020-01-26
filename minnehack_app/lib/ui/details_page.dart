@@ -51,7 +51,7 @@ class DetailPage extends StatelessWidget {
   String _messageBuilder(){
     String str = 'mailto:';
     String email = 'betterworld@betterworld.com';
-    String personName = 'Eastan%20Giebler';
+    String personName = 'User';
 
     str += email;
     str += "?subject=Volunteer%20Signup%20for%20Better%20World";
