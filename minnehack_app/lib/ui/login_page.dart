@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gradient_app_bar/gradient_app_bar.dart';
 
-import 'ui/AppColors.dart';
 
 class LoginPage extends StatefulWidget {
-  static String tag = 'login-page';
   @override
   _LoginPageState createState() => new _LoginPageState();
 }
@@ -23,9 +22,8 @@ class _LoginPageState extends State<LoginPage> {
     final email = TextFormField(
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
-      initialValue: 'alucard@gmail.com',
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: 'iamhelper@gmail.com',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
       ),
@@ -33,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
 
     final password = TextFormField(
       autofocus: false,
-      initialValue: 'some password',
       obscureText: true,
       decoration: InputDecoration(
         hintText: 'Password',
@@ -49,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(24),
         ),
         onPressed: () {
-          //Navigator.of(context).pushNamed(HomePage.tag);
+          Navigator.of(context).pushNamed("/home");
         },
         padding: EdgeInsets.all(12),
         color: Colors.lightBlueAccent,
@@ -66,10 +63,10 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
-      appBar: AppBar(
+      appBar: GradientAppBar(
         elevation: 10.0,
-        backgroundColor: AppColors.prussianBlue,
-        title: Text('Who is Who'),
+        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+        title: Text('Volera'),
       ),
       backgroundColor: Colors.white,
       body: Center(
