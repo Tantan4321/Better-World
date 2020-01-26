@@ -1,82 +1,79 @@
 import 'package:flutter/material.dart';
 import 'package:minnehack_app/configs/text_styles.dart';
+import 'package:minnehack_app/models/event.dart';
 import 'package:minnehack_app/models/planets.dart';
 import 'package:minnehack_app/widgets/separator.dart';
 
 
 class EventSummary extends StatelessWidget {
 
-  final Planet event;
-  final bool horizontal;
+  final Event event;
+  final int id;
 
-  EventSummary(this.event, {this.horizontal = true});
+  EventSummary({this.event, this.id});
 
-  EventSummary.vertical(this.event): horizontal = false;
 
 
   @override
   Widget build(BuildContext context) {
 
-    final planetThumbnail = new Container(
-      margin: new EdgeInsets.symmetric(
-        vertical: 16.0
+    final eventThumbnail = Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 28.0
       ),
-      alignment: horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
-      child: new Hero(
-          tag: "planet-hero-${event.id}",
-          child: new Image(
-          image: new AssetImage(event.image),
+      alignment: FractionalOffset.centerLeft,
+      child: Hero(
+          tag: "event-hero-$id",
+          child: Image(
+          image: NetworkImage(event.image),
           height: 92.0,
           width: 92.0,
         ),
       ),
     );
 
-
-
-    Widget _planetValue({String value, String image}) {
-      return new Container(
-        child: new Row(
+    Widget _eventValue({String value, IconData icon}) {
+      return Container(
+        child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            new Image.asset(image, height: 12.0),
-            new Container(width: 8.0),
-            new Text(event.gravity, style: Style.smallTextStyle),
+            Icon(icon, size: 12.0, color: Colors.blue,),
+            Container(width: 8.0),
+            Text(value, style: Style.smallTextStyle),
           ]
         ),
       );
     }
 
-
-    final planetCardContent = new Container(
-      margin: new EdgeInsets.fromLTRB(horizontal ? 76.0 : 16.0, horizontal ? 12.0 : 42.0, 16.0, 12.0),
+    final cardContent = Container(
+      margin: new EdgeInsets.fromLTRB(76.0, 12.0, 16.0, 12.0),
       constraints: new BoxConstraints.expand(),
       child: new Column(
-        crossAxisAlignment: horizontal ? CrossAxisAlignment.start : CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           new Container(height: 4.0),
-          new Text(event.name, style: Style.titleTextStyle),
+          new Text(event.title, style: Style.titleTextStyle),
           new Container(height: 10.0),
-          new Text(event.location, style: Style.commonTextStyle),
+          new Text(event.organization, style: Style.commonTextStyle),
           new Separator(),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Expanded(
-                flex: horizontal ? 1 : 0,
-                child: _planetValue(
-                  value: event.distance,
-                  image: 'assets/img/ic_distance.png')
+                flex: 1,
+                child: _eventValue(
+                  value: event.website,
+                  icon: Icons.web)
 
               ),
               new Container(
-                width: horizontal ? 8.0 : 32.0,
+                width: 8.0,
               ),
               new Expanded(
-                  flex: horizontal ? 1 : 0,
-                  child: _planetValue(
-                  value: event.gravity,
-                  image: 'assets/img/ic_gravity.png')
+                  flex: 1,
+                  child: _eventValue(
+                  value: event.email,
+                  icon: Icons.email)
               )
             ],
           ),
@@ -85,12 +82,10 @@ class EventSummary extends StatelessWidget {
     );
 
 
-    final planetCard = new Container(
-      child: planetCardContent,
-      height: horizontal ? 124.0 : 154.0,
-      margin: horizontal
-        ? new EdgeInsets.only(left: 46.0)
-        : new EdgeInsets.only(top: 72.0),
+    final eventCard = new Container(
+      child: cardContent,
+      height: 150.0,
+      margin: EdgeInsets.only(left: 46.0),
       decoration: new BoxDecoration(
         color: new Color(0xFF333366),
         shape: BoxShape.rectangle,
@@ -118,13 +113,13 @@ class EventSummary extends StatelessWidget {
 //          : null,
       child: new Container(
         margin: const EdgeInsets.symmetric(
-          vertical: 16.0,
+          vertical: 10.0,
           horizontal: 24.0,
         ),
         child: new Stack(
           children: <Widget>[
-            planetCard,
-            planetThumbnail,
+            eventCard,
+            eventThumbnail,
           ],
         ),
       )
