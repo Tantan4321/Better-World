@@ -21,18 +21,21 @@ class _EventsListState extends State<EventsList> {
         gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
         title: Text('Better World'),
       ),
-      backgroundColor: AppColors.mintGreen,
-      body: Container(
-        child: CustomScrollView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: false,
-          slivers: <Widget>[
-            new SliverPadding(
-              padding: const EdgeInsets.symmetric(vertical: 24.0),
-              sliver: new SliverList(
-                delegate: new SliverChildBuilderDelegate(
-                      (context, index) => new EventSummary(planets[index]),
-                  childCount: planets.length,
+
+      backgroundColor: AppColors.navyBlue,
+      body: Expanded(
+        child: Container(
+          child: CustomScrollView(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: false,
+            slivers: <Widget>[
+              new SliverPadding(
+                padding: const EdgeInsets.symmetric(vertical: 24.0),
+                sliver: new SliverList(
+                  delegate: new SliverChildBuilderDelegate(
+                        (context, index) => new EventSummary(planets[index]),
+                    childCount: planets.length,
+                  ),
                 ),
               ),
             ),

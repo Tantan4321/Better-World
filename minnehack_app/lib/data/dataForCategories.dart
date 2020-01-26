@@ -1,4 +1,5 @@
 
+
 import 'package:minnehack_app/models/event.dart';
 
 
@@ -81,6 +82,10 @@ const List<Event> Res = [
       'location: "IDS Center'
       '80 8th Street S'
       'Minneapolis, MN 55402',
+      location: 'IDS Center'
+      '80 8th Street S'
+      'Minneapolis, MN 55402'
+      ,
       email: null,
       organization: null,
       website: null,

@@ -20,6 +20,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+
     return new Scaffold(
         appBar: GradientAppBar(
           elevation: 10.0,
@@ -52,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ])),
                     SizedBox(height: 90.0),
                     Text(
-                      'Pee Pee Poo Poo',
+                      'Your Name',
                       style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
@@ -60,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(height: 15.0),
                     Text(
-                      'Subscribe guys',
+                      'Information about yourself',
                       style: TextStyle(
                           fontSize: 17.0,
                           fontStyle: FontStyle.italic,
@@ -68,12 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(height: 25.0),
                     Container(
-                        height: 30.0,
-                        width: 95.0,
+                        height: 40.0,
+                        width: 120.0,
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
-                          shadowColor: Colors.greenAccent,
-                          color: Colors.green,
+                          shadowColor: Colors.blueAccent,
+                          color: Colors.blue,
                           elevation: 7.0,
                           child: GestureDetector(
                             onTap: () {},
@@ -87,23 +88,43 @@ class _MyHomePageState extends State<MyHomePage> {
                         )),
                     SizedBox(height: 25.0),
                     Container(
-                        height: 30.0,
-                        width: 95.0,
+                        height: 40.0,
+                        width: 120.0,
                         child: Material(
                           borderRadius: BorderRadius.circular(20.0),
-                          shadowColor: Colors.redAccent,
-                          color: Colors.red,
+                          shadowColor: Colors.blueAccent,
+                          color: Colors.blue,
                           elevation: 7.0,
                           child: GestureDetector(
                             onTap: () {},
                             child: Center(
                               child: Text(
-                                'Log out',
+                                'Change Profile \n Picture',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(color: Colors.white,fontFamily: 'Montserrat'),
+                              ),
+                            ),
+                          ),
+                        )),
+                    SizedBox(height: 25.0),
+                    Container(
+                        height: 40.0,
+                        width: 120.0,
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20.0),
+                          shadowColor: Colors.blueAccent,
+                          color: Colors.blue,
+                          elevation: 7.0,
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: Center(
+                              child: Text(
+                                'Update Email',
                                 style: TextStyle(color: Colors.white, fontFamily: 'Montserrat'),
                               ),
                             ),
                           ),
-                        ))
+                        )),
                   ],
                 ))
           ],

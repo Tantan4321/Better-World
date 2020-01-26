@@ -77,14 +77,15 @@ class _LoginPageState extends State<LoginPage> {
     }
 
     return Scaffold(
-        appBar: GradientAppBar(
-          elevation: 10.0,
-          gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-          title: Center(
-            child: Text('Better World'),
-          ),
-        ),
-        backgroundColor: AppColors.mintGreen,
+      appBar: GradientAppBar(
+        elevation: 10.0,
+        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+        title: Center( child: Text('Better World'),),
+
+      ),
+      backgroundColor: AppColors.oceanBlue,
+
+        
         body: Column(children: <Widget>[
           Text('Better World',
               textAlign: TextAlign.center, style: Style.headerTextStyle),
@@ -92,9 +93,9 @@ class _LoginPageState extends State<LoginPage> {
           Container(
             alignment: Alignment.bottomCenter,
             decoration: BoxDecoration(
-              color: AppColors.smokeWhite,
-              borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-            ),
+          color: AppColors.blue,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
             child: ListView(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
