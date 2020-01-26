@@ -11,7 +11,17 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(child: Center(child: Hero(
+      tag: 'hero',
+      child: CircleAvatar(
+        backgroundColor: Colors.transparent,
+        radius: 130.0,
+        child: Image.asset(
+          'assets/images/logo.png',
+          height: MediaQuery.of(context).size.height * 0.5,
+        ),
+      ),
+    ),));
     var aboutChild = AboutListTile(
         child: Text("About"),
         applicationName: "Application Name",

@@ -15,13 +15,10 @@ class EventSummary extends StatelessWidget {
     final eventThumbnail = Container(
       margin: EdgeInsets.symmetric(vertical: 28.0),
       alignment: FractionalOffset.centerLeft,
-      child: Hero(
-        tag: "event-hero-$id",
-        child: Image(
-          image: NetworkImage(event.image),
-          height: 92.0,
-          width: 92.0,
-        ),
+      child: Image(
+        image: NetworkImage(event.image),
+        height: 92.0,
+        width: 92.0,
       ),
     );
 
@@ -95,7 +92,7 @@ class EventSummary extends StatelessWidget {
     return new GestureDetector(
         onTap: () => Navigator.of(context).push(
               PageRouteBuilder(
-                pageBuilder: (_, __, ___) => DetailPage(event),
+                pageBuilder: (_, __, ___) => DetailPage(event, id),
                 transitionsBuilder:
                     (context, animation, secondaryAnimation, child) =>
                         FadeTransition(opacity: animation, child: child),
@@ -108,7 +105,21 @@ class EventSummary extends StatelessWidget {
           ),
           child: new Stack(
             children: <Widget>[
-              eventCard,
+              Hero(
+                  tag: "event-hero-$id",
+                  flightShuttleBuilder: (
+                    BuildContext flightContext,
+                    Animation<double> animation,
+                    HeroFlightDirection flightDirection,
+                    BuildContext fromHeroContext,
+                    BuildContext toHeroContext,
+                  ) {
+                    return SingleChildScrollView(
+                      child: fromHeroContext.widget,
+                    );
+                  },
+                  child: Material(
+                      type: MaterialType.transparency, child: eventCard)),
               eventThumbnail,
             ],
           ),

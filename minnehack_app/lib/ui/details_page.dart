@@ -9,8 +9,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class DetailPage extends StatelessWidget {
   final Event event;
+  final int id;
 
-  DetailPage(this.event);
+  DetailPage(this.event, this.id);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class DetailPage extends StatelessWidget {
               ),
               Padding(
                 padding: new EdgeInsets.fromLTRB(0.0, 72.0, 0.0, 32.0),
-                child: EventV2Card(event: event),
+                child: EventV2Card(event: event, id: id,),
               ),
             ],
           )),

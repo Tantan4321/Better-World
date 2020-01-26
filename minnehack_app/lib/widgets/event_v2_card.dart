@@ -5,10 +5,10 @@ import 'package:minnehack_app/models/event.dart';
 import 'package:minnehack_app/widgets/separator.dart';
 
 class EventV2Card extends StatelessWidget {
-
   final Event event;
+  final int id;
 
-  EventV2Card({this.event});
+  EventV2Card({this.event, this.id});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,6 @@ class EventV2Card extends StatelessWidget {
       ),
     );
 
-
     final eventCard = new Container(
       child: cardContent,
       height: 154.0,
@@ -54,15 +53,26 @@ class EventV2Card extends StatelessWidget {
       ),
     );
 
-
     return new GestureDetector(
         child: new Container(
-          margin: const EdgeInsets.symmetric(
-            vertical: 16.0,
-            horizontal: 24.0,
-          ),
-          child: eventCard,
-        )
-    );
+            margin: const EdgeInsets.symmetric(
+              vertical: 16.0,
+              horizontal: 24.0,
+            ),
+            child: Hero(
+              tag: "event-hero-$id",
+              flightShuttleBuilder: (
+                  BuildContext flightContext,
+                  Animation<double> animation,
+                  HeroFlightDirection flightDirection,
+                  BuildContext fromHeroContext,
+                  BuildContext toHeroContext,
+                  ) {
+                return SingleChildScrollView(
+                  child: fromHeroContext.widget,
+                );
+              },
+              child: Material(type: MaterialType.transparency, child: eventCard),
+            )));
   }
 }

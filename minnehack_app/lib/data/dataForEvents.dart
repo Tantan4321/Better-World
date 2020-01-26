@@ -41,11 +41,11 @@ const List<Event> events = [
       title: "Metro Area - Become a Team Assistant with Special Olympics!",
       description:
           'Are you looking to be inspired or have an impact in your community? Special Olympics Programs change lives and bring people together. Join the fun - be a part of our global community of athletes, volunteers and fans.'
-          'Opportunities Available'
-          'Team Assistant'
-          'Team Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
-          'Unified Partner'
-          'Those looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
+         
+          '\nTeam Assistant\n'
+          '\t\t\t\tTeam Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
+          '\nUnified Partner\n'
+          '\t\t\t\tThose looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
       time: "We'll work with your schedule.",
       image:
           "https://www.volunteermatch.org/images/gallery/1E507EDE-99DE-6D81-13C6-7EC5E613CCD4_m?ts=1428599512000",
@@ -89,8 +89,15 @@ const List<Event> events = [
   const Event(
     title: "Be an advocate. Fight Poverty",
     description:
+
     'Do you wish that you could have a say in the policies that impact millions of people living in poverty here in the United States and around the world? Are you feeling overwhelmed by this political moment? Maybe you’ve been feeling the urge to do something but aren’t sure what...'
         'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
+        'Do you wish that you could have a say in the policies'
+        'that impact millions of people living in poverty here in the United States and around the world? '
+        'Are you feeling overwhelmed by this political moment? '''
+        'Maybe you’ve been feeling the urge to do something but aren’t sure what...'
+        'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. '
+        'At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
         'RESULTS is a movement of passionate, committed, everyday people. Together we use our voices to influence political decisions that will bring an end to poverty.'
         'As a RESULTS volunteer, you will be an effective advocate in the fight against poverty.'
         'Practically, that means:'
@@ -105,9 +112,8 @@ const List<Event> events = [
         'Step up. Speak out. Become a RESULTS advocate.'
         'Learn more at results.org.',
     time: "We'll work with your schedule",
-    image:
-    "https://res.cloudinary.com/dktp1ybbx/image/upload/c_limit,h_180,w_180/f_auto,fl_lossy,q_auto/v1541443016/organization/prod/731054/xlPVVgc0Mx.jpg",
-    location: 'City Wide Opportunity'
+    image: "https://d2g8igdw686xgo.cloudfront.net/36417624_1548112864989543_r.jpeg",
+    location: 'City Wide Opportunity\n'
         'Minneapolis, MN 55415',
     email: "results@results.org",
     organization: "Results",
@@ -119,17 +125,17 @@ const List<Event> events = [
       title: "Metro Area - Become a Team Assistant with Special Olympics!",
       description:
       'Are you looking to be inspired or have an impact in your community? Special Olympics Programs change lives and bring people together. Join the fun - be a part of our global community of athletes, volunteers and fans.'
-          'Opportunities Available'
-          'Team Assistant'
-          'Team Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
-          'Unified Partner'
-          'Those looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
+
+          '\nTeam Assistant\n'
+          '\t\t\t\tTeam Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
+          '\nUnified Partner\n'
+          '\t\t\t\tThose looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
       time: "We'll work with your schedule.",
       image:
       "https://www.volunteermatch.org/images/gallery/1E507EDE-99DE-6D81-13C6-7EC5E613CCD4_m?ts=1428599512000",
-      location: 'Special Olympics MN'
-          '900 2nd Ave S'
-          'Suite 300'
+      location: 'Special Olympics MN\n'
+          '900 2nd Ave S\n'
+          'Suite 300\n'
           'Minneapolis, MN 55402',
       email: "info@somn.org",
       organization: "Special Olympics Minnesota",
@@ -157,8 +163,8 @@ const List<Event> events = [
       time: "Sat Feb 29, 2020 05:00 AM - 02:00 PM",
       image:
       'https://www.volunteermatch.org/images/gallery/9F33A9DA-DA8B-DDC5-FBBF-4861DD4A31AB_m?ts=1444919773000',
-      location: 'IDS Center'
-          '80 8th Street S'
+      location: 'IDS Center\n'
+          '80 8th Street S\n'
           'Minneapolis, MN 55402',
       email: "cff@cff.org",
       organization: "Cystic Fibrosis Foundation",
@@ -167,8 +173,15 @@ const List<Event> events = [
   const Event(
     title: "Be an advocate. Fight Poverty",
     description:
+
     'Do you wish that you could have a say in the policies that impact millions of people living in poverty here in the United States and around the world? Are you feeling overwhelmed by this political moment? Maybe you’ve been feeling the urge to do something but aren’t sure what...'
         'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
+        'Do you wish that you could have a say in the policies'
+        'that impact millions of people living in poverty here in the United States and around the world? '
+        'Are you feeling overwhelmed by this political moment? '''
+        'Maybe you’ve been feeling the urge to do something but aren’t sure what...'
+        'As a RESULTS advocate, you can stand up for issues of poverty, be heard, and make an impact. '
+        'At RESULTS, we teach you the nuts and bolts of how to do that. We support you to be an advocate.'
         'RESULTS is a movement of passionate, committed, everyday people. Together we use our voices to influence political decisions that will bring an end to poverty.'
         'As a RESULTS volunteer, you will be an effective advocate in the fight against poverty.'
         'Practically, that means:'
@@ -183,9 +196,8 @@ const List<Event> events = [
         'Step up. Speak out. Become a RESULTS advocate.'
         'Learn more at results.org.',
     time: "We'll work with your schedule",
-    image:
-    "https://res.cloudinary.com/dktp1ybbx/image/upload/c_limit,h_180,w_180/f_auto,fl_lossy,q_auto/v1541443016/organization/prod/731054/xlPVVgc0Mx.jpg",
-    location: 'City Wide Opportunity'
+    image: "https://d2g8igdw686xgo.cloudfront.net/36417624_1548112864989543_r.jpeg",
+    location: 'City Wide Opportunity\n'
         'Minneapolis, MN 55415',
     email: "results@results.org",
     organization: "Results",
@@ -197,17 +209,17 @@ const List<Event> events = [
       title: "Metro Area - Become a Team Assistant with Special Olympics!",
       description:
       'Are you looking to be inspired or have an impact in your community? Special Olympics Programs change lives and bring people together. Join the fun - be a part of our global community of athletes, volunteers and fans.'
-          'Opportunities Available'
-          'Team Assistant'
-          'Team Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
-          'Unified Partner'
-          'Those looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
+
+          '\nTeam Assistant\n'
+          '\t\t\t\tTeam Assistants come from all walks of life and backgrounds, and don’t need prior experience... we provide the necessary training and resources. Time commitment for a Team Assistant is approximately 1-2 hours per week for 8-10 weeks, usually on week nights or weekends, plus 1-2 days at a sports competition during a sports season.'
+          '\nUnified Partner\n'
+          '\t\t\t\tThose looking for real, on-the-field Action can get in the game by joining Special Olympics Unified Sports(r), where people with and without intellectual disabilities train and compete together on the same team. There is no better way to truly experience Special Olympics than playing alongside the athletes.',
       time: "We'll work with your schedule.",
       image:
       "https://www.volunteermatch.org/images/gallery/1E507EDE-99DE-6D81-13C6-7EC5E613CCD4_m?ts=1428599512000",
-      location: 'Special Olympics MN'
-          '900 2nd Ave S'
-          'Suite 300'
+      location: 'Special Olympics MN\n'
+          '900 2nd Ave S\n'
+          'Suite 300\n'
           'Minneapolis, MN 55402',
       email: "info@somn.org",
       organization: "Special Olympics Minnesota",
@@ -235,8 +247,8 @@ const List<Event> events = [
       time: "Sat Feb 29, 2020 05:00 AM - 02:00 PM",
       image:
       'https://www.volunteermatch.org/images/gallery/9F33A9DA-DA8B-DDC5-FBBF-4861DD4A31AB_m?ts=1444919773000',
-      location: 'IDS Center'
-          '80 8th Street S'
+      location: 'IDS Center\n'
+          '80 8th Street S\n'
           'Minneapolis, MN 55402',
       email: "cff@cff.org",
       organization: "Cystic Fibrosis Foundation",
