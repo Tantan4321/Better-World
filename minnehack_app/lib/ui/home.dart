@@ -69,6 +69,7 @@ class _HomeState extends State<Home> {
                 "What type of volunteering\nare you looking for?",
                 style: TextStyle(
                   fontSize: 30,
+                  color: AppColors.white,
                   height: 0.9,
                   fontWeight: FontWeight.w900,
                 ),
