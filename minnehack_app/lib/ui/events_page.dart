@@ -22,7 +22,7 @@ class _EventsListState extends State<EventsList> {
         title: Text('Better World'),
       ),
 
-      backgroundColor: AppColors.navyBlue,
+      backgroundColor: AppColors.darkBlue,
       body: Column(
         children: <Widget>[
           Expanded(

@@ -23,6 +23,7 @@ class _HomeState extends State<Home> {
       return ListTile(
         leading: Icon(icon),
         title: Text(s),
+
         onTap: () {
           setState(() {
             // pop closes the drawer
