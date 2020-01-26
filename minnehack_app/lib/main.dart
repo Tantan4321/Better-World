@@ -12,7 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
       title: 'MINNIHACK',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

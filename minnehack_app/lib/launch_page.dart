@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ui/AppColors.dart';
+
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';
   @override
@@ -64,6 +66,11 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
+      appBar: AppBar(
+        elevation: 10.0,
+        backgroundColor: AppColors.prussianBlue,
+        title: Text('Who is Who'),
+      ),
       backgroundColor: Colors.white,
       body: Center(
         child: ListView(
