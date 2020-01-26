@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'AppColors.dart';
 
 class Style {
-  static final baseTextStyle = const TextStyle(fontFamily: 'Nunito');
+  static final baseTextStyle = const TextStyle(fontFamily: 'Roboto');
   static final smallTextStyle = commonTextStyle.copyWith(
     fontSize: 9.0,
   );

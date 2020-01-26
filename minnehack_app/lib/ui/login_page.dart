@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
+import 'package:minnehack_app/configs/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../configs/AppColors.dart';
-
 
 class LoginPage extends StatefulWidget {
   @override
@@ -68,54 +68,56 @@ class _LoginPageState extends State<LoginPage> {
       onPressed: () {},
     );
 
-    void customLaunch(command) async
-    {
-      if(await canLaunch(command))
-        {
-          await launch(command);
-        }
-      else
-        {
-          print("Could not Launch Command");
-        }
+    void customLaunch(command) async {
+      if (await canLaunch(command)) {
+        await launch(command);
+      } else {
+        print("Could not Launch Command");
+      }
     }
 
     return Scaffold(
-      appBar: GradientAppBar(
-        elevation: 10.0,
-        gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-        title: Center( child: Text('Better World'),),
-
-      ),
-      backgroundColor: AppColors.mintGreen,
-
-      body: Container(
-        decoration: BoxDecoration(
-          color: AppColors.smokeWhite,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        appBar: GradientAppBar(
+          elevation: 10.0,
+          gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
+          title: Center(
+            child: Text('Better World'),
+          ),
         ),
+        backgroundColor: AppColors.mintGreen,
+        body: Column(children: <Widget>[
+          Text('Better World',
+              textAlign: TextAlign.center, style: Style.headerTextStyle),
+          SizedBox(height: 100,),
+          Container(
+            alignment: Alignment.bottomCenter,
+            decoration: BoxDecoration(
+              color: AppColors.smokeWhite,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+            ),
+            child: ListView(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              padding: EdgeInsets.only(left: 24.0, right: 24.0),
+              children: <Widget>[
 
-        child: ListView(
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          padding: EdgeInsets.only(left: 24.0, right: 24.0),
-          children: <Widget>[
-            Text('Better World', style: TextStyle(fontFamily: "Roboto",)),
-            logo,
-            SizedBox(height: 48.0),
-            email,
-            SizedBox(height: 8.0),
-            password,
-            SizedBox(height: 24.0),
-            loginButton,
-            RaisedButton(onPressed: ()
-              {
-                customLaunch('mailto:tantan2012g@gmail.com?subject=test%20,body=test%20test');
-              },),
-            forgotLabel
-          ],
-        ),
-      ),
-    );
+                logo,
+                SizedBox(height: 48.0),
+                email,
+                SizedBox(height: 8.0),
+                password,
+                SizedBox(height: 24.0),
+                loginButton,
+                RaisedButton(
+                  onPressed: () {
+                    customLaunch(
+                        'mailto:tantan2012g@gmail.com?subject=test%20,body=test%20test');
+                  },
+                ),
+                forgotLabel
+              ],
+            ),
+          ),
+        ]));
   }
 }
