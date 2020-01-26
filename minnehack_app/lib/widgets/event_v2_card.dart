@@ -41,7 +41,7 @@ class EventV2Card extends StatelessWidget {
       height: 154.0,
       margin: EdgeInsets.only(top: 72.0),
       decoration: new BoxDecoration(
-        color: AppColors.navyBlue,
+        color: new Color(0xFF333366),
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
         boxShadow: <BoxShadow>[

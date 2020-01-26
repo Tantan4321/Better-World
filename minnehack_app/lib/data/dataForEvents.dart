@@ -28,7 +28,7 @@ const List<Event> events = [
         'Step up. Speak out. Become a RESULTS advocate.'
         'Learn more at results.org.',
     time: "We'll work with your schedule",
-    image: "https://cdn.talkpoverty.org/content/uploads/2014/05/joel-e1461333972241-938x625.jpg",
+    image: "https://d2g8igdw686xgo.cloudfront.net/36417624_1548112864989543_r.jpeg",
     location: 'City Wide Opportunity\n'
         'Minneapolis, MN 55415',
     email: "results@results.org",
