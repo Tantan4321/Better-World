@@ -17,7 +17,10 @@ class _LoginPageState extends State<LoginPage> {
       child: CircleAvatar(
         backgroundColor: Colors.transparent,
         radius: 130.0,
-        child: Image.asset('assets/images/logo.png', height: MediaQuery.of(context).size.height * 0.5,),
+        child: Image.asset(
+          'assets/images/logo.png',
+          height: MediaQuery.of(context).size.height * 0.5,
+        ),
       ),
     );
 
@@ -69,45 +72,48 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     return Scaffold(
-
-      backgroundColor: AppColors.darkBlue,
-
-        
-        body: Column(children: <Widget>[
-          SizedBox(height: 60,),
-          Container(
-            child: Text('Better World',
-                textAlign: TextAlign.center, style: Style.headerTextStyle),
-          ),
-          SizedBox(height: 20,),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: logo,
+        resizeToAvoidBottomInset: true,
+        backgroundColor: AppColors.darkBlue,
+        body: Container(
+          child: Column(children: <Widget>[
+            SizedBox(
+              height: 60,
             ),
-          ),
-          SizedBox(height: 80,),
-          Container(
-            alignment: Alignment.bottomCenter,
-            decoration: BoxDecoration(
-          color: AppColors.darkTeal,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-        ),
-            child: ListView(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              padding: EdgeInsets.only(left: 24.0, right: 24.0),
-              children: <Widget>[
-                SizedBox(height: 48.0),
-                email,
-                SizedBox(height: 8.0),
-                password,
-                SizedBox(height: 24.0),
-                loginButton,
-                forgotLabel
-              ],
+            Container(
+              child: Text('Better World',
+                  textAlign: TextAlign.center, style: Style.headerTextStyle),
             ),
-          ),
-        ]));
+            SizedBox(
+              height: 20,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: logo,
+              ),
+            ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                color: AppColors.darkTeal,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+              ),
+              child: ListView(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                padding: EdgeInsets.only(left: 24.0, right: 24.0),
+                children: <Widget>[
+                  SizedBox(height: 48.0),
+                  email,
+                  SizedBox(height: 8.0),
+                  password,
+                  SizedBox(height: 24.0),
+                  loginButton,
+                  forgotLabel
+                ],
+              ),
+            ),
+          ]),
+        ));
   }
 }

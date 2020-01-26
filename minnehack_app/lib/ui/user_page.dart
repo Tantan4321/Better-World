@@ -3,41 +3,69 @@ import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:minnehack_app/configs/AppColors.dart';
 
 
-class UserProfile extends StatelessWidget {
+class UserProfile extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new MyHomePage(),
+  _UserProfileState createState() => new _UserProfileState();
+}
+
+class _UserProfileState extends State<UserProfile> {
+  Drawer getNavDrawer(BuildContext context) {
+    var headerChild = DrawerHeader(child: Text("Header"));
+    var aboutChild = AboutListTile(
+        child: Text("About"),
+        applicationName: "Application Name",
+        applicationVersion: "v1.0.0",
+        applicationIcon: Icon(Icons.adb),
+        icon: Icon(Icons.info));
+
+    ListTile getNavItem(var icon, String s, String routeName) {
+      return ListTile(
+        leading: Icon(icon),
+        title: Text(s),
+
+        onTap: () {
+          setState(() {
+            // pop closes the drawer
+            Navigator.of(context).pop();
+            // navigate to the route
+            Navigator.of(context).pushNamedAndRemoveUntil(routeName, (Route<dynamic> route) => false);
+          });
+        },
+      );
+    }
+
+    var myNavChildren = [
+      headerChild,
+      getNavItem(Icons.settings, "Login", "/"),
+      getNavItem(Icons.home, "Home", "/home"),
+      aboutChild
+    ];
+
+    ListView listView = ListView(children: myNavChildren);
+
+    return Drawer(
+      child: listView,
     );
   }
-}
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-
-    return new Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.navyBlue,
         appBar: GradientAppBar(
           elevation: 10.0,
           gradient: LinearGradient(colors: [Colors.teal, Colors.blue]),
-          title: Center(child: Text('Better World'),),
+          title: Text('Better World'),
         ),
+        drawer: getNavDrawer(context),
         body: new Stack(
           children: <Widget>[
             ClipPath(
               child: Container(color: AppColors.darkTeal.withOpacity(0.8)),
               clipper: getClipper(),
             ),
-
             Positioned(
-                width: 350.0,
+                width: MediaQuery.of(context).size.width,
                 top: MediaQuery.of(context).size.height / 5,
                 child: Column(
                   children: <Widget>[
