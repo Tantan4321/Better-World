@@ -29,7 +29,7 @@ const List<Event> events = [
         'Learn more at results.org.',
     time: "We'll work with your schedule",
     image: "https://cdn.talkpoverty.org/content/uploads/2014/05/joel-e1461333972241-938x625.jpg",
-    location: 'City Wide Opportunity'
+    location: 'City Wide Opportunity\n'
         'Minneapolis, MN 55415',
     email: "results@results.org",
     organization: "Results",
@@ -49,9 +49,9 @@ const List<Event> events = [
       time: "We'll work with your schedule.",
       image:
           "https://www.volunteermatch.org/images/gallery/1E507EDE-99DE-6D81-13C6-7EC5E613CCD4_m?ts=1428599512000",
-      location: 'Special Olympics MN'
-          '900 2nd Ave S'
-          'Suite 300'
+      location: 'Special Olympics MN\n'
+          '900 2nd Ave S\n'
+          'Suite 300\n'
           'Minneapolis, MN 55402',
       email: "info@somn.org",
       organization: "Special Olympics Minnesota",
@@ -79,8 +79,8 @@ const List<Event> events = [
       time: "Sat Feb 29, 2020 05:00 AM - 02:00 PM",
       image:
           'https://www.volunteermatch.org/images/gallery/9F33A9DA-DA8B-DDC5-FBBF-4861DD4A31AB_m?ts=1444919773000',
-      location: 'IDS Center'
-          '80 8th Street S'
+      location: 'IDS Center\n'
+          '80 8th Street S\n'
           'Minneapolis, MN 55402',
       email: "cff@cff.org",
       organization: "Cystic Fibrosis Foundation",

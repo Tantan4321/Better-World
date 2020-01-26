@@ -54,7 +54,7 @@ class DetailPage extends StatelessWidget {
 
     str += email;
     str += "?subject=Volunteer%20Signup%20from%20Better%20World";
-    str += '&body=' + personName+ '%20signed%20up%20for%20the%20"' + event.title + '"%20event.';
+    str += '&body=' + personName + '%20signed%20up%20for%20the%20"' + event.title + '"%20event.';
     return str;
   }
 
