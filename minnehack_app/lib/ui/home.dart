@@ -8,7 +8,44 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Drawer getNavDrawer(BuildContext context) {
+    var headerChild = DrawerHeader(child: Text("Header"));
+    var aboutChild = AboutListTile(
+        child: Text("About"),
+        applicationName: "Application Name",
+        applicationVersion: "v1.0.0",
+        applicationIcon: Icon(Icons.adb),
+        icon: Icon(Icons.info));
 
+    ListTile getNavItem(var icon, String s, String routeName) {
+      return ListTile(
+        leading: Icon(icon),
+        title: Text(s),
+        onTap: () {
+          setState(() {
+            // pop closes the drawer
+            Navigator.of(context).pop();
+            // navigate to the route
+            Navigator.of(context).pushNamed(routeName);
+          });
+        },
+      );
+    }
+
+    var myNavChildren = [
+      headerChild,
+      getNavItem(Icons.settings, "Login", "/login"),
+      getNavItem(Icons.home, "Home", "/home"),
+      getNavItem(Icons.account_box, "List", "/list"),
+      aboutChild
+    ];
+
+    ListView listView = ListView(children: myNavChildren);
+
+    return Drawer(
+      child: listView,
+    );
+  }
   onScroll() {}
 
   Widget _buildCard() {
