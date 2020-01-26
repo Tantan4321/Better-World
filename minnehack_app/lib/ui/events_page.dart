@@ -38,10 +38,10 @@ class _EventsListState extends State<EventsList> {
                   ),
                 ),
               ),
-            ),
+
           ],
         ),
       )
-    );
+    ));
   }
 }
