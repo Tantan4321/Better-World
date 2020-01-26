@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:minnehack_app/configs/text_styles.dart';
 import 'package:minnehack_app/models/event.dart';
-import 'package:minnehack_app/models/planets.dart';
+import 'package:minnehack_app/ui/details_page.dart';
 import 'package:minnehack_app/widgets/separator.dart';
 
-
 class EventSummary extends StatelessWidget {
-
   final Event event;
   final int id;
 
   EventSummary({this.event, this.id});
 
-
-
   @override
   Widget build(BuildContext context) {
-
     final eventThumbnail = Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 28.0
-      ),
+      margin: EdgeInsets.symmetric(vertical: 28.0),
       alignment: FractionalOffset.centerLeft,
       child: Hero(
-          tag: "event-hero-$id",
-          child: Image(
+        tag: "event-hero-$id",
+        child: Image(
           image: NetworkImage(event.image),
           height: 92.0,
           width: 92.0,
@@ -34,14 +27,15 @@ class EventSummary extends StatelessWidget {
 
     Widget _eventValue({String value, IconData icon}) {
       return Container(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Icon(icon, size: 12.0, color: Colors.blue,),
-            Container(width: 8.0),
-            Text(value, style: Style.smallTextStyle),
-          ]
-        ),
+        child: Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
+          Icon(
+            icon,
+            size: 12.0,
+            color: Colors.blue,
+          ),
+          Container(width: 8.0),
+          Text(value, style: Style.smallTextStyle),
+        ]),
       );
     }
 
@@ -60,27 +54,19 @@ class EventSummary extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Expanded(
-                flex: 1,
-                child: _eventValue(
-                  value: event.website,
-                  icon: Icons.web)
-
-              ),
+                  flex: 1,
+                  child: _eventValue(value: event.website, icon: Icons.web)),
               new Container(
                 width: 8.0,
               ),
               new Expanded(
                   flex: 1,
-                  child: _eventValue(
-                  value: event.email,
-                  icon: Icons.email)
-              )
+                  child: _eventValue(value: event.email, icon: Icons.email))
             ],
           ),
         ],
       ),
     );
-
 
     final eventCard = new Container(
       child: cardContent,
@@ -100,29 +86,26 @@ class EventSummary extends StatelessWidget {
       ),
     );
 
-
     return new GestureDetector(
-//      onTap: horizontal
-//          ? () => Navigator.of(context).push(
-//             PageRouteBuilder(
-//              pageBuilder: (_, __, ___) =>  DetailPage(planet),
-//              transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-//                 FadeTransition(opacity: animation, child: child),
-//              ) ,
-//            )
-//          : null,
-      child: new Container(
-        margin: const EdgeInsets.symmetric(
-          vertical: 10.0,
-          horizontal: 24.0,
-        ),
-        child: new Stack(
-          children: <Widget>[
-            eventCard,
-            eventThumbnail,
-          ],
-        ),
-      )
-    );
+        onTap: () => Navigator.of(context).push(
+              PageRouteBuilder(
+                pageBuilder: (_, __, ___) => DetailPage(event),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) =>
+                        FadeTransition(opacity: animation, child: child),
+              ),
+            ),
+        child: new Container(
+          margin: const EdgeInsets.symmetric(
+            vertical: 10.0,
+            horizontal: 24.0,
+          ),
+          child: new Stack(
+            children: <Widget>[
+              eventCard,
+              eventThumbnail,
+            ],
+          ),
+        ));
   }
 }

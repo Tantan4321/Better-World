@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:minnehack_app/data/dataForEvents.dart';
-import 'package:minnehack_app/models/planets.dart';
 import 'package:minnehack_app/widgets/event_summary.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import '../configs/AppColors.dart';
 
 
