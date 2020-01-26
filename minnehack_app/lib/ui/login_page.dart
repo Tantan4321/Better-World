@@ -100,6 +100,7 @@ class _LoginPageState extends State<LoginPage> {
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
+            Text('Better World', style: TextStyle(fontFamily: "Roboto",)),
             logo,
             SizedBox(height: 48.0),
             email,
