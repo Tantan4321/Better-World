@@ -16,5 +16,5 @@ class Style {
   static final headerTextStyle = baseTextStyle.copyWith(
       color: Colors.white, fontSize: 40.0, fontWeight: FontWeight.w400);
   static final detailsTextStyle = baseTextStyle.copyWith(
-      color: AppColors.lightGray, fontSize: 40.0, fontWeight: FontWeight.w400);
+      color: AppColors.lightGray, fontSize: 16.0, fontWeight: FontWeight.w400);
 }
