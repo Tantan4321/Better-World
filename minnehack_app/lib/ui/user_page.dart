@@ -11,7 +11,33 @@ class UserProfile extends StatefulWidget {
 class _UserProfileState extends State<UserProfile> {
 
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Hero(
+          tag: 'hero',
+          child: CircleAvatar(
+            backgroundColor: Colors.transparent,
+            radius: 60.0,
+            child: Image.asset(
+              'assets/images/logo.png',
+              height: MediaQuery.of(context).size.height * 1.0,
+            ),
+          ),
+        ),
+        Container(
+            width: MediaQuery.of(context).size.width * 0.15,
+            height: MediaQuery.of(context).size.width * 0.15,
+            decoration: BoxDecoration(
+                color: Colors.red,
+                image: DecorationImage(
+                    image: NetworkImage(
+                        'https://ca.slack-edge.com/T02N8CJK2-U7M150FU6-80c9a6e819ab-72'),
+                    fit: BoxFit.cover),
+                borderRadius: BorderRadius.all(Radius.circular(MediaQuery.of(context).size.width * 0.15)),
+            ))
+      ],
+    ));
     var aboutChild = AboutListTile(
         child: Text("About"),
         applicationName: "Application Name",
