@@ -47,6 +47,17 @@ class DetailPage extends StatelessWidget {
     }
   }
 
+  String _messageBuilder(){
+    String str = 'mailto:';
+    String email = 'tantan2012g@gmail.com';
+    String personName = 'Eastan%20Giebler';
+
+    str += email;
+    str += "?subject=Volunteer%20Signup%20from%20Better%20World";
+    str += '&body=' + personName+ '%20signed%20up%20for%20the%20"' + event.title + '"%20event.';
+    return str;
+  }
+
   NiceButton _getEmailButton(context) {
     return NiceButton(
       text: "Sign up",
@@ -54,7 +65,7 @@ class DetailPage extends StatelessWidget {
       background: AppColors.navyBlue,
       onPressed: () {
         customLaunch(
-            'mailto:tantan2012g@gmail.com?subject=Volunteer%20Signup%20from%20Better%20World,body=yes');
+            _messageBuilder());
       },
     );
   }
