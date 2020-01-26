@@ -87,7 +87,13 @@ class _LoginPageState extends State<LoginPage> {
         title: Text('Better World'),
       ),
       backgroundColor: AppColors.mintGreen,
-      body: Center(
+
+      body: Container(
+        decoration: BoxDecoration(
+          color: AppColors.smokeWhite,
+          borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
+        ),
+
         child: ListView(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,

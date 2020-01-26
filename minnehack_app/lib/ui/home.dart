@@ -39,6 +39,7 @@ class _HomeState extends State<Home> {
       getNavItem(Icons.settings, "Login", "/"),
       getNavItem(Icons.home, "Home", "/home"),
       getNavItem(Icons.account_box, "List", "/list"),
+      getNavItem(Icons.verified_user, "User", "/user"),
       aboutChild
     ];
 
